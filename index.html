@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div id="header">
+      <div class="Container">
+        <nav>
+          <img src="assets/images/AK.jpg" class="logo" />
+          <ul>
+            <li><a href="#">About me</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact me</a></li>
+            <li><a href="#">Resume</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <p>Mechanical Engineer</p>
+          <h1>
+            Hi, I am <span>Arun Kaushal</span> <br />
+            from Waterloo.
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="assets/images/logo.jpg" />
+          </div>
+          <div class="about-col-2"></div>
+          <h1 class="sub-title">About me</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">
+              Skills
+            </p>
+            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+          </div>
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li>
+                <span>Design</span><br />
+                Mechanical Design
+              </li>
+              <li>
+                <span>Software</span><br />
+                Solid Works
+              </li>
+              <li>
+                <span>Analysis Software</span><br />
+                ANSYS
+              </li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="Experience">
+            <ul>
+                <li>
+                  <span>2022-current</span><br />
+                  Project Engineer at xyz
+                </li>
+                <li>
+                  <span>2018 -2022</span><br />
+                  Senior Mechanical Engineer at abc
+                </li>
+                <li>
+                  <span>2015-2018</span><br />
+                  Mechanical Engineer at pqr
+                </li>
+          </div>
+          <div class="tab-contents" id="Education">
+            <ul>
+                <li>
+                  <span>2014</span><br />
+                  M.Eng
+                </li>
+                <li>
+                  <span>2009</span><br />
+                  M.Tech
+                </li>
+                <li>
+                  <span>2007</span><br />
+                  B.Tech
+                </li>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        let tablinks=document.getElementsByClassName("tab-links")
+        let tabcontents=document.getElementsByClassName("tab-contents")
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+  </body>
+</html>
